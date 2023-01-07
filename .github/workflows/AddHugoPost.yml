@@ -22,11 +22,10 @@ jobs:
 
       - name: commit changed files
         run: |
+          git subtree split --branch posts --prefix published/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Auto updating"
 
       - name: push out to posts branch
-        run: |
-          git subtree split --branch posts --prefix published/
-          git push -f origin posts
+        run: git push -f origin posts
