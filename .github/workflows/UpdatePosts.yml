@@ -16,6 +16,7 @@ jobs:
         uses: s0/git-publish-subdir-action@v2.6.0
         env:
           REPO: git@github.com:h3x0c4t/h3x0c4t.github.io.git
-          BRANCH: posts
+          BRANCH: main
           FOLDER: published
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          TARGET_DIR: content/post
