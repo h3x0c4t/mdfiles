@@ -1,0 +1,21 @@
+name: UpdatePosts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to posts branch
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: posts
+          FOLDER: published
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
