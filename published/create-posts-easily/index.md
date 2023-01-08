@@ -146,6 +146,4 @@ git push -u origin main
 
 Теперь весь процесс публикации выглядит так:
 
-![Результат в гифке](images/ani.gif)
-
-.
+![Результат в гифке](https://hexocat.com/p/create-posts-easily/images/ani.gif)
